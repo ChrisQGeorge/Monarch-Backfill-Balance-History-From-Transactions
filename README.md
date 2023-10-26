@@ -4,9 +4,9 @@ The goal of this script is to backfill the balance history of Monarch money acco
 ## Installation
 This program requires Python 3 to be installed on your system and added to your path. https://www.python.org/downloads/
 If you have git installed, use the command 
-'''
-git clone https://github.com/ChrisQGeorge/Monarch-Backfill-Balance-History-From-Transactions.git
-'''
+
+'git clone https://github.com/ChrisQGeorge/Monarch-Backfill-Balance-History-From-Transactions.git'
+
 
 Otherwise download the Zip file by hitting the "code" button and clicking "download zip" and then extract
 
