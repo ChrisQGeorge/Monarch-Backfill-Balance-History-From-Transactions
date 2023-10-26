@@ -1,0 +1,5 @@
+Date,Merchant,Category,Account,Original Statement,Notes,Amount,Tags
+45219,Internet transfer,TEST,TEST Account,TEST,,1000,
+45153,Internet transfer,TEST,TEST Account,TEST,,-500,
+45126,Internet transfer,TEST,TEST Account,TEST,,300,
+45072,Internet transfer,TEST,TEST Account,TEST,,-200,
