@@ -70,6 +70,7 @@ if __name__ == "__main__":
     i = 1
     while fileName in exportFiles:
         fileName = baseFileName + str(i) + ".csv"
+        i = i+1
 
 
     with open(expPath + fileName, 'w', newline='') as writeFile:
