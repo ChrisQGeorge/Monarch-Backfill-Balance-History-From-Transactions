@@ -17,12 +17,14 @@ Otherwise, download the Zip file by hitting the "code" button and clicking "down
 2. Export the transactions using the "Edit" dropdown and clicking "Download Transactions"
 3. If using Excel format the date format to "general" to convert to the number of days since 1900 and save
 4. Place the file in the "import" directory
-5. run the main.py file with the command "python main.py" in the terminal
+5. run the main.py file with the command "python main.py" in the terminal in the project directory
 6. Follow the instructions in the terminal
-7. Open the generated CSV file in the "export" directory
-8. Format the dates to the format "yyyy-mm-dd" and save
-9. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
-10. You're done!
+* Note: If you get an error at this step, try deleting the content in the merchant, category, Original Statement,	Notes, and tags columns, but do not delete the columns themselves; they should just be blank. There should be gaps between the date, account, and amount columns
+
+8. Open the generated CSV file in the "export" directory
+9. Format the dates to the format "yyyy-mm-dd" and save
+10. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
+11. You're done!
 
 Note: You may find that the balances go into the negative or otherwise being incorrect. This is most likely
 caused by duplicate transactions or incorrect transactions. To fix this, you will need to clean your transaction history, and you can use the balances
