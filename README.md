@@ -22,10 +22,10 @@ Otherwise, download the Zip file by hitting the "code" button and clicking "down
 6. Follow the instructions in the terminal
   * Note: If you get an error at this step, try deleting the content in the merchant, category, Original Statement,	Notes, and tags columns, but do not delete the columns themselves; they should just be blank. There should be gaps between the date, account, and amount columns.
   * If you do delete the column data, the table should look like the following [Date][    ][    ][Account][    ][Amount][    ]; it should not look like [Date][Account][Amount]
-8. Open the generated CSV file in the "export" directory
-9. Format the dates to the format "yyyy-mm-dd" and save
-10. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
-11. You're done!
+7. Open the generated CSV file in the "export" directory
+8. Format the dates to the format "yyyy-mm-dd" and save
+9. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
+10. You're done!
 
 Note: You may find that the balances go into the negative or otherwise being incorrect. This is most likely
 caused by duplicate transactions or incorrect transactions. To fix this, you will need to clean your transaction history, and you can use the balances
