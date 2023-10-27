@@ -23,3 +23,8 @@ Otherwise, download the Zip file by hitting the "code" button and clicking "down
 8. Format the dates to the format "yyyy-mm-dd" and save
 9. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
 10. You're done!
+
+Note: You may find that the balances go into the negative or otherwise being incorrect. This is most likely
+caused by duplicate transactions or incorrect transactions. To fix this, you will need to clean your transaction history, and you can use the balances
+as an indicator of where to look. Remember that this will start at the newest transaction and work backward, so if you have a bad balance at a given date,
+look for transactions after that date.
