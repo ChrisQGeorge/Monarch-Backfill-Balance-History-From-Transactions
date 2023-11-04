@@ -1,5 +1,5 @@
 # Monarch-Backfill-Balance-History-From-Transactions
-The goal of this script is to backfill the balance history of Monarch money accounts based of an exported transaction history.
+The goal of this script is to backfill the balance history of Monarch money accounts based off of an exported transaction history.
 
 ## Installation
 This program requires Python 3 to be installed on your system and added to your path. https://www.python.org/downloads/
