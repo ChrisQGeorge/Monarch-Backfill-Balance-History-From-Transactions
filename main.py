@@ -92,9 +92,15 @@ def importMintBalances():
     importDir = getPath("import")
     selection = selectImportFile(importDir)
     accountName = input("What is the Monarch account name?")
+    multiplier = 1
     loadTable = []
     with open(str(selection), newline='') as impFile:
         unsortedTable = csv.reader(impFile)
+
+        for row in unsortedTable:
+            if row[1] == "Debts":
+                multiplier = -1
+            break
 
         next(unsortedTable)
 
@@ -115,17 +121,12 @@ def importMintBalances():
 
             if currDate == loadTable[i][0]:runningBalance = loadTable[i][1]
 
-            balances.append([((datetime(1899, 12, 30) + timedelta(days=int(currDate))).strftime('%Y-%m-%d')), runningBalance, accountName])
+            balances.append([((datetime(1899, 12, 30) + timedelta(days=int(currDate))).strftime('%Y-%m-%d')), str(float(runningBalance)*multiplier), accountName])
             currDate += 1
         i += 1
 
 
     return balances
-
-
-
-
-
 
 
 def importMonarchTransactions():
