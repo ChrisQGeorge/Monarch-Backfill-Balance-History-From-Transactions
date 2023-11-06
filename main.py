@@ -28,7 +28,7 @@ if __name__ == "__main__":
     runningBal = int(float(re.sub(",|\$","",input("What is the current account balance?: ")))*100)
     
     with open(selection, newline='') as impFile:
-        table = csv.reader(impFile, delimiter=',', quotechar='|')
+        table = csv.reader(impFile)
 
         for row in table:
             if not row[0] == "Date":
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
 
     with open(expPath + fileName, 'w', newline='') as writeFile:
-        fileWrite = csv.writer(writeFile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        fileWrite = csv.writer(writeFile)
         
         for balance in balances:
             fileWrite.writerow(balance)
