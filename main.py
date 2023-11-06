@@ -3,14 +3,12 @@ import re
 import csv
 import pathlib
 import platform
-
+from datetime import datetime, timedelta
 
 
 
 def getPath(inpString):
     system = platform.system()
-    impPath = str(pathlib.Path(__file__).parent) + "\\import\\"
-    expPath = str(pathlib.Path(__file__).parent) + "\\export\\"
 
     if system == "Linux":
         return str(pathlib.Path(__file__).parent) + "/"+inpString+"/"
@@ -38,7 +36,6 @@ def exportBalances(balances):
             fileWrite.writerow(balance)
 
 
-
 def selectImportFile(importDir):
 
     filenames = os.listdir(importDir)
@@ -58,8 +55,10 @@ def selectImportFile(importDir):
 
     return selection
 
+
 def importMintTransactions():
     pass
+
 
 def importMintBalances():
     pass
@@ -73,11 +72,15 @@ def importMonarchTransactions():
 
     print(selection)
     with open(str(selection), newline='') as impFile:
-        table = csv.reader(impFile)
+        unsortedTable = csv.reader(impFile)
+
+        next(unsortedTable)
+
+        table = sorted(unsortedTable, key = lambda row: datetime.strptime(row[0], "%Y-%m-%d"), reverse=True)
 
         for row in table:
             if not row[0] == "Date":
-                date = int(row[0])
+                date = (datetime.strptime(row[0], '%Y-%m-%d') - datetime(1899, 12, 30)).days
                 account = row[3]
                 amount = int(float(row[6])*100)
                 transactions[date] = [date, runningBal, account]
@@ -105,15 +108,11 @@ def importMonarchTransactions():
     keys.sort(reverse=True)
 
     for date in keys:
-        balances.append([transactions[date][0], transactions[date][1]/100, transactions[date][2]])
+        balances.append([(datetime(1899, 12, 30) + timedelta(days=int(transactions[date][0]))).strftime('%Y-%m-%d'), transactions[date][1]/100, transactions[date][2]])
         
     return balances
 
 def menu():
-    importDir = getPath("import")
-    filenames = os.listdir(importDir)
-
-    exitBool = False
     usrInput = ""
     balances = []
     while True:
@@ -143,12 +142,6 @@ e.Exit\n\
     
     if balances != []:
         exportBalances(balances)
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
