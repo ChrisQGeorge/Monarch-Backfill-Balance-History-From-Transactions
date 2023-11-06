@@ -12,7 +12,7 @@ If you have git installed, use the command:
 Otherwise, download the Zip file by hitting the "code" button and clicking "download zip" and then extract
 
 ## Setup
-
+### To import monarch transactions
 1. Import any transactions into the account in Monarch
 2. Export the transactions using the "Edit" dropdown and clicking "Download Transactions"
 3. Place the file in the "import" directory
@@ -21,6 +21,17 @@ Otherwise, download the Zip file by hitting the "code" button and clicking "down
 6. A generated file will appear in the "Export" directory
 7. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
 8. You're done!
+
+### To import Mint trends balance history
+1. Go to the trends tab in Mint
+2. Select the assets or debts tab and select a particular account
+3. Go to the bottom of the page and click the "Export to CSV" button
+4. Move the file to the "Import" directory
+5. run the main.py file with the command "python main.py" in the terminal in the project directory
+6. Follow the instructions in the terminal
+7. A generated file will appear in the "Export" directory
+8. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
+9. You're done!
 
 Note: You may find that the balances go into the negative or otherwise being incorrect. This is most likely
 caused by duplicate transactions or incorrect transactions. To fix this, you will need to clean your transaction history, and you can use the balances
