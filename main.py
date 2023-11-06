@@ -181,21 +181,20 @@ e.Exit\n\
 
         elif usrInput == "2":
             while True:
-                usrInput = input(
+                usrInput = input(#1.Convert Mint transactions to Monarch balances\n\
                     "Would you like to:\n\
-1.Convert Mint transactions to Monarch balances\n\
-2.Convert Mint trend account balances to Monarch balances\n\
+1.Convert Mint trend account balances to Monarch balances\n\
 e.Exit\n\
 :"
                 )
                 if usrInput == "e":
                     break
                 elif usrInput == "1":
-                    balances = importMintTransactions()
-                    break
-                elif usrInput == "2":
                     balances = importMintBalances()
                     break
+                #elif usrInput == "2":
+                #    balances = importMintBalances()
+                #    break
                 else:
                     print("Error: Please select one of the available options:")
             break
