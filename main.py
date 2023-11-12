@@ -132,7 +132,7 @@ def importMintBalances():
 def importMonarchTransactions():
     importDir = getPath("import")
     selection = selectImportFile(importDir)
-    runningBal = int(float(re.sub(",|\$","",input("What is the current account balance?: ")))*100)
+    runningBal = int(float(re.sub(",|\$","",input("What is the current account balance?(positive for asset, negative for liability): ")))*100)
     transactions = {}
 
     with open(str(selection), newline='') as impFile:
