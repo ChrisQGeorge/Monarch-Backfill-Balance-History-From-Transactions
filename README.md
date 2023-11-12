@@ -18,9 +18,10 @@ Otherwise, download the Zip file by hitting the "code" button and clicking "down
 3. Place the file in the "import" directory
 4. run the main.py file with the command "python main.py" in the terminal in the project directory
 5. Follow the instructions in the terminal
-6. A generated file will appear in the "Export" directory
-7. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
-8. You're done!
+6. When the instructions prompt for an account value, please put the actual value of the account (positive for asset, negative for liability) rather than the absolute value
+7. A generated file will appear in the "Export" directory
+8. Go to the account in Monarch, hit the edit button, click "Upload Balance History" and select the generated file 
+9. You're done!
 
 ### To import Mint trends balance history
 1. Go to the trends tab in Mint
