@@ -10,10 +10,10 @@ from datetime import datetime, timedelta
 def getPath(inpString):
     system = platform.system()
 
-    if system == "Linux":
-        return str(pathlib.Path(__file__).parent) + "/"+inpString+"/"
-    else:
+    if system == "Windows":
         return str(pathlib.Path(__file__).parent) + "\\"+inpString+"\\"
+    else:
+        return str(pathlib.Path(__file__).parent) + "/"+inpString+"/"
 
 
 def exportBalances(balances):
